@@ -5,6 +5,23 @@
     width: 43px;
     margin: 0rem 0.5rem -1rem 1.4rem;
 }
+
+.logo_img {
+    display: inline-block;
+    size: 100rem;
+}
+.logo_glow_img {
+    display: none;
+    filter: brightness(1.2);
+}
+
+.logo-container:hover .logo_img {
+    display: none;
+}
+.logo-container:hover .logo_glow_img {
+    display: inline-block;
+}
+
 .logo-container, .navbar ul {
     display: inline-block;
 }
