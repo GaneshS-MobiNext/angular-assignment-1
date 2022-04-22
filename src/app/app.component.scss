@@ -31,10 +31,9 @@
     list-style: none;
     font-weight: bold;
     color: white;
-    border-radius: 3px;
 }
 
-.navbar ul li:hover {
+.navbar ul li:hover:not(.activelink) {
     background-color: white;
     color: black;
 }
