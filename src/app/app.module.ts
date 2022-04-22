@@ -9,6 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServicesComponent } from './services/services.component';
 import { RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     ProductsComponent,
     AboutUsComponent,
     ContactUsComponent,
-    ServicesComponent
+    ServicesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,8 @@ import { RouterModule } from '@angular/router';
         {path: 'services', component: ServicesComponent},
         {path: 'about', component: AboutUsComponent},
         {path: 'contact', component: ContactUsComponent},
+        {path: '', redirectTo: '/home', pathMatch: 'full'},
+        {path: '**', component: PageNotFoundComponent}
     ])
   ],
   providers: [],
