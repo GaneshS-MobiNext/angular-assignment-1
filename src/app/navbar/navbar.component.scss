@@ -1,0 +1,43 @@
+.navbar {
+    background-color: black;
+}
+.logo-container img {
+    width: 43px;
+    margin: 0rem 0.5rem -1rem 1.4rem;
+}
+
+.logo_img {
+    display: inline-block;
+    size: 100rem;
+}
+.logo_glow_img {
+    display: none;
+    filter: brightness(1.2);
+}
+
+.logo-container:hover .logo_img {
+    display: none;
+}
+.logo-container:hover .logo_glow_img {
+    display: inline-block;
+}
+
+.logo-container, .navbar ul {
+    display: inline-block;
+}
+.navbar ul li {
+    display: inline-block;
+    padding: 0.9rem 2rem 1rem 2rem;
+    list-style: none;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul li:hover:not(.activelink) {
+    background-color: white;
+    color: black;
+}
+.activelink {
+    background-color: bisque;
+    color: black !important;
+}
