@@ -21,7 +21,7 @@ export class ServicesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(studentsData);
+    console.log(this.Students[0].name);
   }
 
 }
