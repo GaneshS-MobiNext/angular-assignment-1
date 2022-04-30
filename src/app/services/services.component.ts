@@ -17,11 +17,13 @@ export class ServicesComponent implements OnInit {
   // students: any = (studentsData as any).default;
 
   Students: STUDENTS[] = studentsData;
-
+  studentArray = Object.values(this.Students);
+  
   constructor() { }
-
+  
   ngOnInit(): void {
-    console.log(this.Students[0].name);
+    this.studentArray.splice(-2, 2);
+    console.log(this.Students);
   }
 
 }

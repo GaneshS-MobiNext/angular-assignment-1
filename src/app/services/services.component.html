@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let student of Students">
+            <tr *ngFor="let student of studentArray">
                 <td>{{ student.id }}</td>
                 <td>{{ student.name }}</td>
                 <td>{{ student.email }}</td>
@@ -22,3 +22,9 @@
         </tbody>
     </table>
 </div>
+<!-- <p>Here are total {{ studentArray.length }} of studentArray</p>
+<ul>
+    <li *ngFor="let student of studentArray">
+        {{ student.name }}
+    </li>
+</ul> -->

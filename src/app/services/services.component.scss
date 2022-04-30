@@ -5,6 +5,7 @@ table, th, td {
 
 table {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -14,4 +15,8 @@ table {
 th {
   width: 25%;
   padding: 0.7rem;
+  font-weight: bold;
+}
+td {
+  padding: 0.5rem;
 }
