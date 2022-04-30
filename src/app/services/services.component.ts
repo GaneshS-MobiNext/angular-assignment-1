@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import * as studentsData  from '../../assets/json/data.json';
+
+interface STUDENTS {
+  id: number;
+  name: string;
+  email: string;
+  gender: number;
+}
 
 @Component({
   selector: 'app-services',
@@ -6,10 +14,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
+  // students: any = (studentsData as any).default;
+
+  Students: STUDENTS[] = studentsData;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(studentsData);
   }
 
 }
