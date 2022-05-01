@@ -11,15 +11,22 @@ export class StudentTdComponent implements OnInit {
   Students: STUDENTS[] = studentsData;
   studentArray = (Object.values(this.Students));
 
-  alertStudent(i:any) {
-    alert(i)
-  }
+
 
   constructor() { }
 
   ngOnInit(): void {
     this.studentArray.splice(-2, 2);
     console.log(this.Students);
+  }
+
+  alertStudent(i:any) {
+    alert(i)
+  }
+
+  onRemove(student: any) {
+    let index = this.studentArray.indexOf(student);
+    this.studentArray.splice(index, 1);
   }
 
 }

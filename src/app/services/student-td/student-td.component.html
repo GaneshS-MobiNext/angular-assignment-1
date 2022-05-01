@@ -6,6 +6,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,9 @@
               <!-- <td>{{ student.gender }}</td> -->
               <td *ngIf="student.gender">Female</td>
               <td *ngIf="!student.gender">Male</td>
+              <td>
+                  <button (click)="onRemove(student)">Remove</button>
+              </td>
             </tr>
         </tbody>
     </table>
