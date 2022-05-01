@@ -1,0 +1,36 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+th {
+  padding: 0.7rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+}
+td {
+  padding: 0.5rem;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+td, th {
+  border-left: 0px none;
+  border-right: 0px none;
+}
+.section-heading {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}

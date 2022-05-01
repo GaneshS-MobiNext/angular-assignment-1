@@ -1,0 +1,21 @@
+<h1 class="section-heading">Students List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of studentArray">
+              <td>{{ student.id }}</td>
+              <td>{{ student.name }}</td>
+              <td>{{ student.email }}</td>
+              <!-- <td>{{ student.gender }}</td> -->
+              <td *ngIf="student.gender">Female</td>
+              <td *ngIf="!student.gender">Male</td>
+            </tr>
+        </tbody>
+    </table>

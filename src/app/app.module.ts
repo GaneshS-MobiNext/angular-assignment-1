@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { StudentTdComponent } from './services/student-td/student-td.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     ServicesComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    StudentTdComponent
   ],
   imports: [
     BrowserModule,
