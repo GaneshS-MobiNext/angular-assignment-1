@@ -11,6 +11,10 @@ export class StudentTdComponent implements OnInit {
   Students: STUDENTS[] = studentsData;
   studentArray = (Object.values(this.Students));
 
+  alertStudent(i:any) {
+    alert(i)
+  }
+
   constructor() { }
 
   ngOnInit(): void {

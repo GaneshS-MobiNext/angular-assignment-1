@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let student of studentArray">
-              <td>{{ student.id }}</td>
+              <td class="cursor-pointer" (click)="alertStudent(student.id + student.name + student.email)">{{ student.id }}</td>
               <td>{{ student.name }}</td>
               <td>{{ student.email }}</td>
               <!-- <td>{{ student.gender }}</td> -->
