@@ -34,3 +34,13 @@ td, th {
   font-weight: bold;
   text-align: center;
 }
+button {
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #3c3c3c;
+  color: white;
+}
+button:first-child{
+  margin-right: 1rem;
+}

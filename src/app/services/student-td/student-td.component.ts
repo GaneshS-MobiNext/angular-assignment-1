@@ -28,5 +28,9 @@ export class StudentTdComponent implements OnInit {
     let index = this.studentArray.indexOf(student);
     this.studentArray.splice(index, 1);
   }
+  onView(student: any) {
+    let index = this.studentArray.indexOf(student);
+    alert(this.studentArray[index].id + " " + this.studentArray[index].name + " " + this.studentArray[index].email + " ");
+  }
 
 }
