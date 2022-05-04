@@ -1,0 +1,26 @@
+<h1 class="section-heading">Students List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of studentArray">
+              <td class="cursor-pointer" (click)="alertStudent(student.id + student.name + student.email)">{{ student.id }}</td>
+              <td>{{ student.name }}</td>
+              <td>{{ student.email }}</td>
+              <!-- <td>{{ student.gender }}</td> -->
+              <td *ngIf="student.gender">Female</td>
+              <td *ngIf="!student.gender">Male</td>
+              <td>
+                  <button (click)="onView(student)">View</button>
+                  <button (click)="onRemove(student)">Remove</button>
+              </td>
+            </tr>
+        </tbody>
+    </table>
