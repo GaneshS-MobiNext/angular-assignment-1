@@ -18,6 +18,10 @@ th {
   color: white;
   background-color: black;
 }
+th:last-child {
+  text-align: right;
+  padding-right: 3.2rem;
+}
 td {
   padding: 0.5rem;
 }
