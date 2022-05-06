@@ -1,4 +1,8 @@
 <h1 class="section-heading">Students List</h1>
+<div class="container text-right">
+    <label for="searchTerm">Search: </label>
+    <input type="text" class="input-text" id="searchTerm" [(ngModel)]="searchTerm" placeholder=" Type Here">
+</div>
     <table>
         <thead>
             <tr>
@@ -10,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let student of studentArray">
+            <tr *ngFor="let student of studentArray | search:searchTerm; let i = index">
               <td class="cursor-pointer" (click)="alertStudent(student.id + student.name + student.email)">{{ student.id }}</td>
               <td>{{ student.name }}</td>
               <td>{{ student.email }}</td>

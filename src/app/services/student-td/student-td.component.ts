@@ -10,6 +10,7 @@ import * as studentsData  from '../../../assets/json/data.json';
 export class StudentTdComponent implements OnInit {
   Students: STUDENTS[] = studentsData;
   studentArray = (Object.values(this.Students));
+  searchTerm = "";
 
 
 
@@ -17,7 +18,7 @@ export class StudentTdComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentArray.splice(-2, 2);
-    console.log(this.Students);
+    // console.log(this.Students);
   }
 
   alertStudent(i:any) {

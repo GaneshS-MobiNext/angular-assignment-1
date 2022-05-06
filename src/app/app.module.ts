@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { StudentTdComponent } from './services/student-td/student-td.component';
 import { TableSearchPipe } from './table-search.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { TableSearchPipe } from './table-search.pipe';
     NavbarComponent,
     FooterComponent,
     StudentTdComponent,
-    TableSearchPipe
+    TableSearchPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
         {path: 'home', component: HomeComponent},
         {path: 'products', component: ProductsComponent},
