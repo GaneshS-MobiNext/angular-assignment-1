@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StudentTdComponent } from './services/student-td/student-td.component';
 import { TableSearchPipe } from './table-search.pipe';
 import { SearchPipe } from './search.pipe';
+import { AutofocusDirective } from './autofocus.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SearchPipe } from './search.pipe';
     FooterComponent,
     StudentTdComponent,
     TableSearchPipe,
-    SearchPipe
+    SearchPipe,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,
