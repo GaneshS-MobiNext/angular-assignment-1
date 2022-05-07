@@ -19,11 +19,13 @@ export class ServicesComponent implements OnInit {
   id: number | undefined;
   name: string | undefined;
   genderStr: string | undefined;
+  email: string | undefined;
   
   parentFunction(data: any){
     this.id =  data.id;
     this.name = data.name;
     this.genderStr = data.genderStr;
+    this.email = data.email;
   }
   constructor() { }
   ngOnInit(): void {

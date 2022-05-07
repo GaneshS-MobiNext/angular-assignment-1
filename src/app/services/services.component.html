@@ -4,15 +4,19 @@
         <table class="student_info_table">
             <tr>
                 <td class="student_info">Student ID:</td>
-                <td class="student_info">{{ id }}</td>
+                <td class="student_info_data">{{ id || "ID" }}</td>
             </tr>
             <tr>
                 <td class="student_info">Student Name:</td>
-                <td class="student_info">{{ name }}</td>
+                <td class="student_info_data">{{ name || "Name" }}</td>
             </tr>
             <tr>
                 <td class="student_info">Student Gender:</td>
-                <td class="student_info">{{ genderStr }}</td>
+                <td class="student_info_data">{{ genderStr || "Gender" }}</td>
+            </tr>
+            <tr>
+                <td class="student_info">Student Email:</td>
+                <td class="student_info_data">{{ email || "Email" }}</td>
             </tr>
         </table>
     </div>
