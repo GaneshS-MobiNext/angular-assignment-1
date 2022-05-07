@@ -16,13 +16,18 @@ export interface STUDENTS {
 })
 export class ServicesComponent implements OnInit {
   // students: any = (studentsData as any).default;
-
+  id: number | undefined;
+  name: string | undefined;
+  genderStr: string | undefined;
   
-  
+  parentFunction(data: any){
+    this.id =  data.id;
+    this.name = data.name;
+    this.genderStr = data.genderStr;
+  }
   constructor() { }
-  
   ngOnInit(): void {
     
-  }
+  } 
 
 }

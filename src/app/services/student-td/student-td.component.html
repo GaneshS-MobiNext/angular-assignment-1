@@ -33,7 +33,7 @@
               <td *ngIf="student.gender === 3">Other Gender</td>
               <td *ngIf="student.gender === null">Not Known</td> -->
               <td>
-                  <button (click)="onView(student)">View</button>
+                  <button (click)="sendData(student)">View</button>
                   <button (click)="onRemove(student)">Remove</button>
               </td>
             </tr>

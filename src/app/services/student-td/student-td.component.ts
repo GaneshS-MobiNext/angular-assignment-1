@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { STUDENTS } from '../services.component'
 import * as studentsData  from '../../../assets/json/data.json';
 import { elementAt } from 'rxjs';
@@ -8,13 +8,14 @@ import { elementAt } from 'rxjs';
   templateUrl: './student-td.component.html',
   styleUrls: ['./student-td.component.scss']
 })
+
 export class StudentTdComponent implements OnInit {
   Students: STUDENTS[] = studentsData;
   studentArray = (Object.values(this.Students));
   searchTerm = "";
-
-
-
+  
+  
+  @Output() parentFunction:EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -32,6 +33,11 @@ export class StudentTdComponent implements OnInit {
       }
     });
     console.log(this.Students);
+
+    this.parentFunction.emit("new name");
+  }
+  sendData(student: any){
+    this.parentFunction.emit(student);
   }
 
   alertStudent(i:any) {
