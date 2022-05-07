@@ -18,12 +18,12 @@
               <td class="cursor-pointer" (click)="alertStudent(student.id + student.name + student.email)">{{ student.id }}</td>
               <td>{{ student.name }}</td>
               <td>{{ student.email }}</td>
-              <!-- <td>{{ student.gender }}</td> -->
-              <td *ngIf="student.gender === 0">Female</td>
+              <td>{{ student.genderStr }}</td>
+              <!-- <td *ngIf="student.gender === 0">Female</td>
               <td *ngIf="student.gender === 1">Male</td>
               <td *ngIf="student.gender === 2">Transgender</td>
               <td *ngIf="student.gender === 3">Other Gender</td>
-              <td *ngIf="student.gender === null">Not Known</td>
+              <td *ngIf="student.gender === null">Not Known</td> -->
               <td>
                   <button (click)="onView(student)">View</button>
                   <button (click)="onRemove(student)">Remove</button>

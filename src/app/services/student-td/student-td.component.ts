@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { STUDENTS } from '../services.component'
 import * as studentsData  from '../../../assets/json/data.json';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-student-td',
@@ -18,7 +19,19 @@ export class StudentTdComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentArray.splice(-2, 2);
-    // console.log(this.Students);
+
+    this.studentArray.forEach(element => {
+      if (element.gender === 0) {
+        element.genderStr = "Female";
+      } else if(element.gender === 1) {
+        element.genderStr = "Male";
+      } else if(element.gender === 2) {
+        element.genderStr = "Transgender";
+      } else {
+        element.genderStr = "Not Known";
+      }
+    });
+    console.log(this.Students);
   }
 
   alertStudent(i:any) {

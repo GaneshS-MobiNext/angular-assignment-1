@@ -6,6 +6,7 @@ export interface STUDENTS {
   name: string;
   email: string;
   gender: number;
+  genderStr?: string;
 }
 
 @Component({
