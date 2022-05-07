@@ -6,7 +6,7 @@ table, th, td {
 table {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  // width: 60rem;
+  width: clamp(40rem, 64rem, 100%);
   min-width: 40rem;
   margin-left: auto;
   margin-right: auto;
