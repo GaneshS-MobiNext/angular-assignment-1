@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { StudentTdComponent } from './services/student-td/student-td.component';
 import { TableSearchPipe } from './table-search.pipe';
 import { SearchPipe } from './search.pipe';
 import { AutofocusDirective } from './autofocus.directive';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -45,8 +47,11 @@ import { AutofocusDirective } from './autofocus.directive';
         {path: 'contact', component: ContactUsComponent},
         {path: '', redirectTo: '/home', pathMatch: 'full'},
         {path: '**', component: PageNotFoundComponent}
-    ])
+    ]),
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
