@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { STUDENTS } from '../services.component'
-import * as studentsData  from '../../../assets/json/data.json';
+import { STUDENTS } from '../services/services.component'
+import * as studentsData  from '../../assets/json/data.json';
 import { elementAt } from 'rxjs';
 
 @Component({
